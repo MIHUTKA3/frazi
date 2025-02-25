@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автовоспроизводящееся аудио</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('minion.jpg') no-repeat center center/cover;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener('click', function() {
+            let audio = document.getElementById('audio');
+            audio.volume = 1.0;
+            audio.play();
+        });
+    </script>
+</head>
+<body>
+<audio id="audio" autoplay>
+    <source src="audio.mp3" type="audio/mp3">
+    Ваш браузер не поддерживает аудио.
+</audio>
+</body>
+</html>
